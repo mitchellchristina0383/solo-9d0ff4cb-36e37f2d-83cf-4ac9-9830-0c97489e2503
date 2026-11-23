@@ -5,4 +5,11 @@ services:
     container_name: vlan-switch
     ports:
       - "8000:8000"
+    environment:
+      # 最多同时在役的实验台数量
+      BENCH_MAX: "3"
+      # 空闲回收时间（秒）：开台或上次成功写操作后空闲满该时长即回收
+      BENCH_IDLE_TIMEOUT: "300"
+      # 后台回收线程轮询间隔（秒）
+      BENCH_REAP_INTERVAL: "10"
     restart: unless-stopped

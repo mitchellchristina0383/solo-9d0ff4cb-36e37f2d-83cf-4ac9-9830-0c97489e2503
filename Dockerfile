@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py switch.py ./
+COPY app.py switch.py bench.py ./
 COPY templates ./templates
 
 EXPOSE 8000

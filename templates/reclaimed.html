@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>实验台已回收</title>
+<style>
+  :root { --bg:#0f1420; --card:#1a2233; --line:#2a3550; --fg:#dfe6f3;
+          --dim:#8b97b0; --bad:#f87171; --acc:#60a5fa; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:14px/1.5 "Segoe UI",system-ui,sans-serif; }
+  main { max-width:640px; margin:12vh auto; }
+  .card { background:var(--card); border:1px solid var(--line);
+          border-radius:12px; padding:28px 30px; }
+  h1 { color:var(--bad); font-size:20px; margin:0 0 14px; }
+  p { color:var(--fg); }
+  .sub { color:var(--dim); font-size:13px; line-height:1.8; }
+  a { color:var(--acc); }
+</style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <h1>🛟 该实验台已被回收</h1>
+    <p>{{ message }}</p>
+    <p class="sub">
+      实验台在开台或上一次写操作成功结束后，空闲满规定时间即自动回收；
+      页面刷新只查看、不会续期。回收后旧链接与补发的请求都不能再操作，
+      也不会碰到其他小组新开的台。
+    </p>
+    <p><a href="/">→ 回首页查看名额并另开新台</a></p>
+  </section>
+</main>
+</body>
+</html>
